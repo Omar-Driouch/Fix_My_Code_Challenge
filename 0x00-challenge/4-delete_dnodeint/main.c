@@ -3,6 +3,9 @@
 #include <stdio.h>
 #include "lists.h"
 
+void fillthenode(dlistint_t **head, unsigned int index);
+void fillthenode_withprint(dlistint_t **head, unsigned int index);
+
 /**
  * main - check the code for Holberton School students.
  *
@@ -25,45 +28,29 @@ int main(void)
 	printf("-----------------\n");
 	delete_dnodeint_at_index(&head, 5);
 	print_dlistint(head);
-	printf("-----------------\n");
-	delete_dnodeint_at_index(&head, 0);
+	fillthenode_withprint(&head, 0);
 	print_dlistint(head);
-	printf("-----------------\n");
-	delete_dnodeint_at_index(&head, 0);
-	print_dlistint(head);
-	printf("-----------------\n");
-	delete_dnodeint_at_index(&head, 0);
-	print_dlistint(head);
-	printf("-----------------\n");
-	delete_dnodeint_at_index(&head, 0);
-	print_dlistint(head);
-	printf("-----------------\n");
-	delete_dnodeint_at_index(&head, 0);
-	print_dlistint(head);
-	printf("-----------------\n");
-	delete_dnodeint_at_index(&head, 0);
-	print_dlistint(head);
-	printf("-----------------\n");
-	delete_dnodeint_at_index(&head, 0);
-	printf("-----------------\n");
-	delete_dnodeint_at_index(&head, 0);
-	printf("-----------------\n");
-	delete_dnodeint_at_index(&head, 0);
-	printf("-----------------\n");
-	delete_dnodeint_at_index(&head, 0);
-	printf("-----------------\n");
-	delete_dnodeint_at_index(&head, 0);
-	printf("-----------------\n");
-	delete_dnodeint_at_index(&head, 0);
-	printf("-----------------\n");
-	delete_dnodeint_at_index(&head, 0);
-	printf("-----------------\n");
-	delete_dnodeint_at_index(&head, 0);
-	printf("-----------------\n");
-	delete_dnodeint_at_index(&head, 0);
-	printf("-----------------\n");
-	delete_dnodeint_at_index(&head, 0);
+	fillthenode(&head, 0);
 	print_dlistint(head);
 	free_dlistint(head);
 	return (0);
+}
+
+void fillthenode(dlistint_t **head, unsigned int index)
+{
+	for (size_t i = 0; i < 10; i++)
+	{
+		printf("-----------------\n");
+		delete_dnodeint_at_index(&head, 0);
+	}
+}
+
+void fillthenode_withprint(dlistint_t **head, unsigned int index)
+{
+	for (size_t i = 0; i < 6; i++)
+	{
+		printf("-----------------\n");
+		delete_dnodeint_at_index(&head, 0);
+		print_dlistint(head);
+	}
 }
